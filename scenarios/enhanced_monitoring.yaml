@@ -1,0 +1,30 @@
+# 監視強化シナリオ
+# 段階的に監視能力を強化する政策介入
+
+name: "Enhanced Monitoring"
+description: "段階的に監視能力を強化するシナリオ。検挙率への影響を評価。"
+
+steps: 200
+
+model_params:
+  n_leaders: 5
+  n_operatives: 30
+  n_brokers: 10
+  n_facilitators: 8
+  n_community_members: 50
+  n_authorities: 3
+  network_k: 4
+  network_p: 0.3
+  initial_monitoring_capacity: 0.5
+  economic_stress_level: 0.6
+
+interventions:
+  - step: 50
+    type: "monitoring"
+    intensity: 0.5
+  - step: 100
+    type: "monitoring"
+    intensity: 0.7
+  - step: 150
+    type: "monitoring"
+    intensity: 0.9

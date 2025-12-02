@@ -1,0 +1,30 @@
+# 経済支援シナリオ
+# 経済的ストレスを軽減する政策介入
+
+name: "Economic Support"
+description: "経済支援により逸脱的活動への参加動機を減らすシナリオ。"
+
+steps: 200
+
+model_params:
+  n_leaders: 5
+  n_operatives: 30
+  n_brokers: 10
+  n_facilitators: 8
+  n_community_members: 50
+  n_authorities: 3
+  network_k: 4
+  network_p: 0.3
+  initial_monitoring_capacity: 0.5
+  economic_stress_level: 0.6
+
+interventions:
+  - step: 50
+    type: "economic_support"
+    intensity: 0.6
+  - step: 100
+    type: "economic_support"
+    intensity: 0.6
+  - step: 150
+    type: "economic_support"
+    intensity: 0.6

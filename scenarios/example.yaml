@@ -1,0 +1,27 @@
+# サンプルシナリオ
+# 簡単な政策介入の例
+
+name: "Example Scenario"
+description: "シミュレーションの基本的な使い方を示すサンプルシナリオ"
+
+steps: 150
+
+model_params:
+  n_leaders: 5
+  n_operatives: 25
+  n_brokers: 8
+  n_facilitators: 6
+  n_community_members: 40
+  n_authorities: 2
+  network_k: 4
+  network_p: 0.3
+  initial_monitoring_capacity: 0.4
+  economic_stress_level: 0.5
+
+interventions:
+  - step: 50
+    type: "monitoring"
+    intensity: 0.6
+  - step: 100
+    type: "economic_support"
+    intensity: 0.5

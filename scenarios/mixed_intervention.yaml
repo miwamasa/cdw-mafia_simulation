@@ -1,0 +1,50 @@
+# 混合介入シナリオ
+# 経済支援、コミュニティ関与、監視を組み合わせた包括的アプローチ
+
+name: "Mixed Intervention"
+description: "経済支援、コミュニティ関与強化、監視の組み合わせによる包括的政策介入シナリオ。"
+
+steps: 200
+
+model_params:
+  n_leaders: 5
+  n_operatives: 30
+  n_brokers: 10
+  n_facilitators: 8
+  n_community_members: 50
+  n_authorities: 3
+  network_k: 4
+  network_p: 0.3
+  initial_monitoring_capacity: 0.5
+  economic_stress_level: 0.6
+
+interventions:
+  # Phase 1: コミュニティ基盤の構築
+  - step: 30
+    type: "community_engagement"
+    intensity: 0.5
+  - step: 50
+    type: "economic_support"
+    intensity: 0.5
+
+  # Phase 2: 継続的支援と監視開始
+  - step: 80
+    type: "community_engagement"
+    intensity: 0.6
+  - step: 100
+    type: "economic_support"
+    intensity: 0.6
+  - step: 100
+    type: "monitoring"
+    intensity: 0.5
+
+  # Phase 3: 統合的アプローチの強化
+  - step: 130
+    type: "community_engagement"
+    intensity: 0.7
+  - step: 150
+    type: "economic_support"
+    intensity: 0.7
+  - step: 150
+    type: "monitoring"
+    intensity: 0.6
