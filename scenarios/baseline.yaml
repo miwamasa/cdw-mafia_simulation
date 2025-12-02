@@ -1,0 +1,21 @@
+# ベースラインシナリオ（介入なし）
+# 政策介入を行わない基準ケース
+
+name: "Baseline"
+description: "介入なしのベースラインシナリオ。他のシナリオとの比較基準として使用。"
+
+steps: 200
+
+model_params:
+  n_leaders: 5
+  n_operatives: 30
+  n_brokers: 10
+  n_facilitators: 8
+  n_community_members: 50
+  n_authorities: 3
+  network_k: 4
+  network_p: 0.3
+  initial_monitoring_capacity: 0.5
+  economic_stress_level: 0.6
+
+interventions: []
