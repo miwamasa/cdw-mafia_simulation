@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ## 使い方
 
-### 基本的な実行
+### 基本的な実行（シミュレーション）
 
 ```bash
 # デフォルト設定で実行（100ステップ）
@@ -78,6 +78,22 @@ python mesa_abm_aiem.py --scenario scenarios/example.yaml
 python mesa_abm_aiem.py --scenario scenarios/baseline.yaml --output outputs/baseline_run.csv
 ```
 
+### 結果の分析と可視化
+
+複数シナリオを実行した後、比較分析レポートを生成できます：
+
+```bash
+# 分析スクリプトの実行
+python analyze_results.py
+```
+
+このスクリプトは以下を生成します：
+- 📊 **比較グラフ**: 全シナリオの時系列比較（6つの指標）
+- 📈 **ネットワーク分析**: ネットワーク密度とクラスタリング係数の推移
+- 📄 **分析レポート**: Markdown形式の詳細な比較分析レポート
+
+出力は `outputs/reports/` ディレクトリに保存されます。
+
 ## プロジェクト構造
 
 ```
@@ -86,6 +102,7 @@ cdw-mafia_simulation/
 ├── requirements.txt           # 依存パッケージ
 ├── instructions.md            # プロジェクト指示書
 ├── mesa_abm_aiem.py          # メインスクリプト
+├── analyze_results.py        # 結果分析スクリプト
 ├── spec/                      # 仕様ドキュメント
 │   ├── spcification.md       # 詳細仕様書
 │   └── prototype.md          # プロトタイプ説明
@@ -100,6 +117,10 @@ cdw-mafia_simulation/
 │   ├── mixed_intervention.yaml
 │   └── example.yaml
 └── outputs/                   # 出力ファイル（実行時に生成）
+    ├── *.csv                 # シミュレーション結果
+    └── reports/              # 分析レポート
+        ├── *.md              # Markdownレポート
+        └── *.png             # 可視化グラフ
 ```
 
 ## シナリオファイルの作成
