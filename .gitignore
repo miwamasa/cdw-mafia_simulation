@@ -36,6 +36,9 @@ ENV/
 outputs/*.csv
 outputs/*.png
 outputs/*.html
+outputs/reports/*.csv
+outputs/reports/*.png
+outputs/reports/*.md
 
 # OS
 .DS_Store
